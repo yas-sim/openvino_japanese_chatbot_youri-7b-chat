@@ -27,6 +27,7 @@ pip install -r requirements.txt
 ## Test environment
 - Windows 11 23H2
 - Core i7-10700K, 64GB, GPU Intel A380
+- OpenVINO 2023.1.0
 
 ## Special thanks
 Rinna Co.,Ltd - Original developer of rinna/youri-7b-chat model.
