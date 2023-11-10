@@ -1,7 +1,7 @@
 # youri-7b-chat OpenVINO Japanese chatbot demo
 
 ## Description
-This is a LLM Japanese chatbot demo program using Intel OpenVINO toolkit. The demo uses [`rinna/youri-7b-chat`](https://huggingface.co/rinna/youri-7b-chat) model developed by [Rinna Co.,Ltd](https://rinna.co.jp).
+This is an LLM Japanese chatbot demo program using Intel OpenVINO toolkit. The demo uses [`rinna/youri-7b-chat`](https://huggingface.co/rinna/youri-7b-chat) model developed by [Rinna Co.,Ltd](https://rinna.co.jp).
 This program can use either one of 'CPU', 'GPU.0' (integrated GPU), and 'GPU.1' Intel discrete GPU for inferencing.
 
 ## Requirement
