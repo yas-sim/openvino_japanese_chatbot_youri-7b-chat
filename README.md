@@ -3,6 +3,9 @@
 ## Description
 This is a LLM Japanese chatbot demo program using Intel OpenVINO toolkit. The demo uses [`rinna/youri-7b-chat`](https://huggingface.co/rinna/youri-7b-chat) model developed by [Rinna Co.,Ltd](https://rinna.co.jp).
 
+## Requirement
+
+
 |file|description|
 |---|---|
 |`config.yml`|The system setting file. You can specify huggingface model cache directory and device for inferencing|
@@ -10,6 +13,10 @@ This is a LLM Japanese chatbot demo program using Intel OpenVINO toolkit. The de
 |`model_download.py`|This program downloads `rinna/youri-7b-chat` model from huggingface and convert it into FP16 OpenVINO IR model.<br>The converted model will be stored in `./youri-7b-chat/FP16/` directory. Also, the original model downloaded from hugging face will be stored in `./cache/huggingface/hub/` directory.|
 |`benchmark_pyt.py`|Benchmark program using PyTorch.|
 |`benchmark_ov.py`|Benchmark program using OpenVINO.|
+
+## Test environment
+- Windows 11 23H2
+- Core i7-10700K, 64GB, GPU Intel A380
 
 ## Special thanks
 Rinna Co.,Ltd - Original developer of rinna/youri-7b-chat model.
