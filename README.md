@@ -2,9 +2,10 @@
 
 ## Description
 This is a LLM Japanese chatbot demo program using Intel OpenVINO toolkit. The demo uses [`rinna/youri-7b-chat`](https://huggingface.co/rinna/youri-7b-chat) model developed by [Rinna Co.,Ltd](https://rinna.co.jp).
+This program can use either one of 'CPU', 'GPU.0' (integrated GPU), and 'GPU.1' Intel discrete GPU for inferencing.
 
 ## Requirement
-
+- At least main memory of 32GB. 64GB is recommended. 
 
 ## Install prerequisites
 Recommend to use Python virtual env.<br>
@@ -12,6 +13,8 @@ You need to have Python installed.
 ```sh
 pip install -r requirements.txt
 ```
+
+## Files
 
 |file|description|
 |---|---|
