@@ -11,7 +11,7 @@ This program can use either one of 'CPU', 'GPU.0' (integrated GPU), and 'GPU.1' 
 Recommend to use Python virtual env.<br>
 You need to have Python installed.
 ```sh
-#optional
+# (optional) create a python venv and enable it.
 python -m venv venv
 (win) venv/Scripts/activate
 (Lnx) source venv/bin/activate
@@ -34,13 +34,21 @@ pip install -r requirements1-install.txt
 ![example](./resources/example.png)
 
 ## Test environment
-- Software
-	- Windows 11 23H2
-	- OpenVINO 2023.1.0
-- Hardware
-	- CPU: Core i7-10700K
-	- MEM: 64GB
-	- GPU: Intel A380 (discrete GPU is optional)
+- System 1
+	- Software
+		- Windows 11 23H2
+		- OpenVINO 2023.1.0
+	- Hardware
+		- CPU: Core i7-10700K
+		- MEM: 64GB
+		- GPU: Intel A380 (discrete GPU is optional)
+- System 2
+	- Software
+		- Ubuntu 22.04.3
+		- OpenVINO 2023.1.0
+	- Hardware
+		- CPU: Xeon Platinum 8358
+		- MEM: 256GB
 
 ## Special thanks
 Rinna Co.,Ltd - Original developer of rinna/youri-7b-chat model.
