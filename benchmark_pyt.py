@@ -17,6 +17,12 @@ prompt = """\
 token_ids = tokenizer.encode(prompt, add_special_tokens=False, return_tensors="pt")
 
 niter = 10
+if len(sys.argv)>1:
+    niter = int(sys.argv[1])
+    if niter <1:
+        niter = 10
+print(niter)
+
 ttl = 0
 with torch.no_grad():
     for i in range(niter):

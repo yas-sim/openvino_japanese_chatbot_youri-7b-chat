@@ -1,2 +1,5 @@
 "hf_cache_dir" : "./cache/huggingface/hub/"
 "device" : "CPU"
+
+"ir_model_dir" : "./youri-7b-chat/INT8_compressed_weights"
+#"ir_model_dir" : "./youri-7b-chat/FP16"
