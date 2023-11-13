@@ -11,6 +11,11 @@ This program can use either one of 'CPU', 'GPU.0' (integrated GPU), and 'GPU.1' 
 Recommend to use Python virtual env.<br>
 You need to have Python installed.
 ```sh
+#optional
+python -m venv venv
+(win) venv/Scripts/activate
+(Lnx) source venv/bin/activate
+
 pip install -r requirements0-uninstall.txt
 pip install -r requirements1-install.txt
 ```
