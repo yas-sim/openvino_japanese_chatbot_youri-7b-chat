@@ -1,0 +1,18 @@
+setuptools>=56.0.0
+openvino-nightly
+--extra-index-url https://download.pytorch.org/whl/cpu
+git+https://github.com/huggingface/optimum-intel.git
+git+https://github.com/openvinotoolkit/nncf.git@release_v270
+gradio
+onnx
+einops
+transformers>=4.33.0
+nncf==2.5.0
+
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch==1.13.1; sys_platform == 'darwin'
+torch==1.13.1+cpu; sys_platform == 'linux' or platform_system == 'Windows'
+torchvision==0.14.1; sys_platform == 'darwin'
+torchvision==0.14.1+cpu; sys_platform == 'linux' or platform_system == 'Windows'
+
+numpy>=1.21.0

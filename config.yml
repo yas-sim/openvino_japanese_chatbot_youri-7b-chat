@@ -1,2 +1,3 @@
-"hf_cache_dir" : "./cache/huggingface/hub/"
+#"hf_cache_dir" : "./cache/huggingface/hub/"
+"hf_cache_dir" : "f:/.cache/huggingface/hub/"
 "device" : "CPU"

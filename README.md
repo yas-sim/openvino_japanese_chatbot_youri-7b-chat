@@ -11,7 +11,8 @@ This program can use either one of 'CPU', 'GPU.0' (integrated GPU), and 'GPU.1' 
 Recommend to use Python virtual env.<br>
 You need to have Python installed.
 ```sh
-pip install -r requirements.txt
+pip install -r requirements0-uninstall.txt
+pip install -r requirements1-install.txt
 ```
 
 ## Files
