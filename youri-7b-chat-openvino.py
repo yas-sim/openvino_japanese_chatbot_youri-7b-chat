@@ -63,6 +63,8 @@ start_message            = model_configuration["start_message"]
 stop_tokens              = model_configuration.get("stop_tokens")
 tokenizer_kwargs         = model_configuration.get("tokenizer_kwargs", {})
 
+#start_message = ''
+
 max_new_tokens = 256
 
 class StopOnTokens(StoppingCriteria):
@@ -123,6 +125,7 @@ def convert_history_to_text(history:List[Tuple[str, str]]):
             )
         ]
     )
+    print(text)
     return text
 
 
@@ -160,7 +163,9 @@ def bot(history, temperature, top_p, top_k, repetition_penalty, conversation_id)
     messages = convert_history_to_text(history)
 
     # Tokenize the messages string
-    input_ids = tok(messages, return_tensors="pt", **tokenizer_kwargs).input_ids
+    tokens = tok(messages, return_tensors="pt", **tokenizer_kwargs)
+    input_ids = tokens.input_ids
+    atten_mask = tokens.attention_mask
     if input_ids.shape[1] > 2000:
         history = [history[-1]]
         messages = convert_history_to_text(history)
@@ -174,11 +179,11 @@ def bot(history, temperature, top_p, top_k, repetition_penalty, conversation_id)
         top_p=top_p,
         top_k=top_k,
         repetition_penalty=repetition_penalty,
-        streamer=streamer
-        
-        #pad_token_id=tok.pad_token_id,
-        #bos_token_id=tok.bos_token_id,
-        #eos_token_id=tok.eos_token_id
+        streamer=streamer,
+        attention_mask=atten_mask,
+        pad_token_id=0, #tok.pad_token_id,
+        bos_token_id=tok.bos_token_id,
+        eos_token_id=tok.eos_token_id
     )
     if stop_tokens is not None:
         generate_kwargs["stopping_criteria"] = StoppingCriteriaList(stop_tokens)
